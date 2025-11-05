@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LABORATORIO 14 – JAVASCRIPT ORIENTADO A OBJETOS</title>
+
+  <!-- FUENTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-marino: #002b5b;
+      --azul-claro: #006494;
+      --beige: #f5f3e7;
+      --blanco: #ffffff;
+      --sombra: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, var(--beige) 0%, #e7eef4 100%);
+      color: var(--azul-marino);
+      text-align: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.6em;
+      color: var(--azul-marino);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--azul-claro);
+      margin-bottom: 35px;
+      font-weight: 500;
+      font-size: 1.2em;
+    }
+
+    .container {
+      background-color: var(--blanco);
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 45px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px var(--sombra);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    button {
+      background-color: var(--azul-marino);
+      color: var(--beige);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 0.95em;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--azul-claro);
+      transform: scale(1.05);
+      color: var(--blanco);
+    }
+
+    footer {
+      margin-top: 50px;
+      color: var(--azul-marino);
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+
+    .highlight {
+      color: var(--azul-claro);
+      font-weight: 600;
+    }
+
+    .nota {
+      background-color: var(--beige);
+      border-left: 4px solid var(--azul-marino);
+      padding: 15px;
+      margin-top: 25px;
+      text-align: left;
+      font-size: 0.95em;
+      color: var(--azul-marino);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>LABORATORIO 14</h1>
+  <h2>JAVASCRIPT ORIENTADO A OBJETOS</h2>
+
+  <div class="container">
+    <div class="button-grid">
+      <button onclick="cargar('js/ejercicio3.js')">Ejercicio 3</button>
+      <button onclick="cargar('js/ejercicio4.js')">Ejercicio 4</button>
+      <button onclick="cargar('js/ejercicio5.js')">Ejercicio 5</button>
+      <button onclick="cargar('js/ejercicio6.js')">Ejercicio 6</button>
+      <button onclick="cargar('js/ejercicio7.js')">Ejercicio 7</button>
+      <button onclick="cargar('js/ejercicio8.js')">Ejercicio 8</button>
+      <button onclick="cargar('js/ejercicio9.js')">Ejercicio 9</button>
+      <button onclick="cargar('js/ejercicio10.js')">Ejercicio 10</button>
+      <button onclick="cargar('js/ejercicio11.js')">Ejercicio 11</button>
+      <button onclick="cargar('js/ejercicio12.js')">Ejercicio 12</button>
+      <button onclick="cargar('js/ejercicio13.js')">Ejercicio 13</button>
+      <button onclick="cargar('js/ejercicio14.js')">Ejercicio 14</button>
+      <button onclick="cargar('js/ejercicio15.js')">Ejercicio 15</button>
+      <button onclick="cargar('js/ejercicio16.js')">Ejercicio 16</button>
+      <button onclick="cargar('js/ejercicio17.js')">Ejercicio 17</button>
+      <button onclick="cargar('js/ejercicio18.js')">Ejercicio 18</button>
+      <button onclick="cargar('js/ejercicio19.js')">Ejercicio 19</button>
+    </div>
+
+    <div class="nota">
+      <strong>NOTA:</strong> Los resultados se mostrarán en la consola del navegador </strong>
+    </div>
+  </div>
+
+  <script>
+    function cargar(archivo) {
+      const script = document.createElement('script');
+      script.src = archivo + '?v=' + new Date().getTime();
+      document.body.appendChild(script);
+    }
+  </script>
+
+  <footer>
+    © 2025 <span class="highlight">Brigitte Karolay Velasquez Puma</span> -Laboratorio 14
+  </footer>
+</body>
+</html>
